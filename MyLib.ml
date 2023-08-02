@@ -6,24 +6,24 @@ let read_whole_file filename =
   close_in ch;
   s
 
-let print_list l =
+let print_list fmt l =
   printf "[";
   let rec p = function
     | [] -> ()
-    | [a] -> printf "%d" a
-    | h :: t -> printf "%d; " h; p t
+    | [a] -> printf fmt a
+    | h :: t -> printf fmt h; printf "; "; p t
   in p l;
   printf "]"
 
-let print_list_nl l =
-  print_list l;
+let print_list_nl fmt l =
+  print_list fmt l;
   printf "\n"
 
-let rec print_list_of_lists = function
+let rec print_list_of_lists fmt = function
   | [] -> ()
-  | [a] -> print_list a
-  | h :: t -> print_list h; printf "; "; print_list_of_lists t
+  | [a] -> print_list fmt a
+  | h :: t -> print_list fmt h; printf "; "; print_list_of_lists fmt t
 
-let print_list_of_lists_nl l =
-  print_list_of_lists l;
+let print_list_of_lists_nl fmt l =
+  print_list_of_lists fmt l;
   printf "\n"
