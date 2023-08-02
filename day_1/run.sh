@@ -1,0 +1,1 @@
+ocamlc str.cma -I +str MyLib.ml day_1/day_1.ml -o day_1/a.out && cd day_1 && ./a.out
