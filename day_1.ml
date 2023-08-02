@@ -57,7 +57,7 @@ let part_2 msg input =
   |> sum_of 3
   |> printf "Result %s: %d\n" msg
 
-let () = part_1 "test 1" (read_whole_file "./day-1.test")
-let () = part_1 "part 1" (read_whole_file "./day-1.input")
-let () = part_2 "test 2" (read_whole_file "./day-1.test")
-let () = part_2 "part 2" (read_whole_file "./day-1.input")
+let () = part_1 "test 1" (read_whole_file "./day_1.test")
+let () = part_1 "part 1" (read_whole_file "./day_1.input")
+let () = part_2 "test 2" (read_whole_file "./day_1.test")
+let () = part_2 "part 2" (read_whole_file "./day_1.input")
