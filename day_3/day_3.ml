@@ -23,11 +23,6 @@ let map_char_to_priority c =
   | 'A' .. 'Z' -> Char.code c - Char.code 'A' + 27
   | a -> failwith (sprintf "Invalid character: '%c'" a)
 
-let rec window_3 = function
-  | [] -> []
-  | a :: b :: c :: t -> [a; b; c] :: window_3 (t)
-  | t -> raise (Invalid_argument "list ist node divisible by 3")
-
 let part_1 msg input =
   parse_input input
   |> List.map split_string_in_half

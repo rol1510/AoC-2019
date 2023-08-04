@@ -1,0 +1,1 @@
+ocamlc str.cma -I +str -I ./parcoom/src/ MyLib.ml parcoom/src/parcoom.ml day_5/day_5.ml -o day_5/a.out && cd day_5 && ./a.out

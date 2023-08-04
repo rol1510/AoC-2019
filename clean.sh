@@ -1,1 +1,3 @@
-rm -i *.cm* */*.cm* */a.out -f
+rm *.cm*
+rm */*.cm*
+rm */a.out
