@@ -10,3 +10,11 @@ echo "--- Day 5 ---"
 sh day_5/run.sh
 
 echo
+echo "--- Day 6 ---"
+sh day_6/run.sh
+
+# echo
+# echo "--- Day 7 ---"
+# sh day_7/run.sh
+
+echo
