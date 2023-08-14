@@ -6,6 +6,26 @@ let read_whole_file filename =
   close_in ch;
   s
 
+
+let _show_list prefix postfix seperator fmt l =
+  printf prefix;
+  let rec p = function
+    | [] -> ()
+    | [a] -> printf "%s" (fmt a)
+    | h :: t -> printf "%s" (fmt h); printf seperator; p t
+  in p l;
+  printf postfix
+
+let show_list fmt l =
+  _show_list "[" "]" "; " fmt l
+
+let show_list_tall fmt l =
+  _show_list "[\n  " "\n]\n" ";\n  " fmt l
+
+let show_list_nl fmt l =
+  show_list fmt l;
+  printf "\n"
+
 let print_list fmt l =
   printf "[";
   let rec p = function

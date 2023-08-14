@@ -30,3 +30,9 @@ Result test 2-4: 29
 Result test 2-5: 26
 Result part 2: 3059
 
+--- Day 7 ---
+Result test 1: 95437
+Result part 1: 919137
+Result test 2: 24933642
+Result part 2: 2877389
+
